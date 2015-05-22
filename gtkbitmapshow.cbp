@@ -31,27 +31,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-mms-bitfields" />
-			<Add option="`pkg-config --cflags gtk-2.0`" />
-			<Add option="`pkg-config --cflags gdk-2.0`" />
-			<Add directory="$(#gtk.include)" />
-			<Add directory="$(#gtk.include)/gtk-2.0" />
-			<Add directory="$(#gtk.include)/cairo" />
-			<Add directory="$(#gtk.include)/gdk" />
-			<Add directory="$(#gtk.include)/glib-2.0" />
-			<Add directory="$(#gtk.lib)/glib-2.0/include" />
-			<Add directory="$(#gtk.include)/pango-1.0" />
-			<Add directory="$(#gtk.lib)/gtk-2.0/include" />
-			<Add directory="$(#gtk.include)/atk-1.0" />
-			<Add directory="$(#gtk.include)/gdk-pixbuf-2.0" />
+			<Add option="`pkg-config --cflags gtk+-3.0`" />
 		</Compiler>
 		<Linker>
-			<Add option="`pkg-config --libs gtk-2.0`" />
-			<Add option="`pkg-config --libs gdk-2.0`" />
-			<Add library="gtk-win32-2.0" />
-			<Add library="gobject-2.0" />
-			<Add library="glib-2.0" />
-			<Add library="gdk-win32-2.0" />
-			<Add directory="$(#gtk.lib)" />
+			<Add option="`pkg-config --libs gtk+-3.0`" />
 		</Linker>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
